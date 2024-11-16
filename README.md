@@ -5,19 +5,34 @@ pip install -r requirements.txt
 python app.py
 ```
 
-# Download file
+# File Management
 
-Access this site to download all the files from `/public` in a tar.
+All the files are in `/public`.
 
+# API Document
+
+> backend as: 192.168.10.10:9000
+
+## /download
+
+Download all the files in a `.tar`.
+
+```cmd
+curl -o file.tar http://192.168.10.10:9000/download
 ```
-127.0.0.1/download
-```
-# Use Wget
 
-Start Linux and Use:
+## /download/<filename>
 
+Download target file.
+
+```cmd
+curl http://192.168.10.10:9000/download/<filename>
 ```
-# if your server is running on 192.168.199.216:9000
-wget -O wgetFiles.tar http://192.168.199.216:9000/download
-tar xvf wgetFiles.tar
+
+## /md5/<filename>
+
+Get md5 value of target file. Same as `md5sum <filename>`.
+
+```cmd
+curl http://192.168.10.10:9000/md5/<filename>
 ```
