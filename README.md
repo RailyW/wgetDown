@@ -21,7 +21,7 @@ Download all the files in a `.tar`.
 curl -o file.tar http://192.168.10.10:9000/download
 ```
 
-## /download/<filename>
+## /download/\<filename\>
 
 Download target file.
 
@@ -29,7 +29,7 @@ Download target file.
 curl http://192.168.10.10:9000/download/<filename>
 ```
 
-## /md5/<filename>
+## /md5/\<filename\>
 
 Get md5 value of target file. Same as `md5sum <filename>`.
 
