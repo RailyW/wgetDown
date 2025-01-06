@@ -18,7 +18,12 @@ All the files are in `/public`.
 Download all the files in a `.tar`.
 
 ```cmd
-curl -o file.tar http://192.168.10.10:9000/download
+wget -O file.tar http://192.168.10.10:9000/download
+```
+Run the following command to decompress the tar file.
+
+```cmd
+tar -xvf file.tar
 ```
 
 ## /download/\<filename\>
@@ -26,7 +31,7 @@ curl -o file.tar http://192.168.10.10:9000/download
 Download target file.
 
 ```cmd
-curl http://192.168.10.10:9000/download/<filename>
+wget http://192.168.10.10:9000/download/<filename>
 ```
 
 ## /md5/\<filename\>
@@ -34,5 +39,10 @@ curl http://192.168.10.10:9000/download/<filename>
 Get md5 value of target file. Same as `md5sum <filename>`.
 
 ```cmd
-curl http://192.168.10.10:9000/md5/<filename>
+wget -O <filename>.md5 http://192.168.10.10:9000/md5/<filename>
+```
+
+Run the following command to view md5 value.
+```cmd
+cat <filename>.md5
 ```
